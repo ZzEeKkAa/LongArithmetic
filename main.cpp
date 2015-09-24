@@ -12,6 +12,8 @@ int main(){
 
     BigInteger bi(v,10,10);
 
-    cout<<bi.GetAt(1)<<bi.GetAt(0)<<endl;
+    for(int i=4; i>=0; --i)
+        cout<<bi[i];
+
 
 }

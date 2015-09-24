@@ -13,7 +13,11 @@ class BigInteger : private std::vector<int>
         void ConvertTo(int system);
         int GetSystem();
         int GetAt(int pos);
+        int GetSize();
+        void Resize(int len, int basic_value=0);
         virtual ~BigInteger();
+        friend const BigInteger operator+(const BigInteger& left, const BigInteger& right);
+        int &operator[](const int pos);
     protected:
     private:
         bool negative;

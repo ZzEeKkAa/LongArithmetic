@@ -1,11 +1,23 @@
 # depslib dependency file v1.0
-1442927891 source:d:\programs\projects\3semestr\longarithmetic\src\biginteger.cpp
+1443108004 source:d:\programs\projects\3semestr\longarithmetic\src\biginteger.cpp
 	"BigInteger.h"
 
-1442927366 d:\programs\projects\3semestr\longarithmetic\include\biginteger.h
+1443107949 d:\programs\projects\3semestr\longarithmetic\include\biginteger.h
 	<vector>
 
-1442927883 source:d:\programs\projects\3semestr\longarithmetic\main.cpp
+1443106290 source:d:\programs\projects\3semestr\longarithmetic\main.cpp
 	<iostream>
 	"BigInteger.h"
+
+1443107369 source:d:\programs\projects\3semestr\longarithmetic\src\karatsubamultiplies.cpp
+	"KaratsubaMultiplies.h"
+
+1443106937 d:\programs\projects\3semestr\longarithmetic\include\karatsubamultiplies.h
+	<Multiplies.h>
+
+1443107692 d:\programs\projects\3semestr\longarithmetic\include\multiplies.h
+	"BigInteger.h"
+
+1443106401 source:d:\programs\projects\3semestr\longarithmetic\src\multiplies.cpp
+	"Multiplies.h"
 

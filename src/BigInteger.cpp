@@ -38,3 +38,16 @@ int BigInteger::GetAt(int pos)
 {
     return (*this)[pos];
 }
+
+int &BigInteger::operator[](const int pos){
+    if(pos<size())
+    return std::vector<int>::operator[](pos);
+}
+
+int BigInteger::GetSize(){
+    return size();
+}
+
+void BigInteger::Resize(int len, int basic_value){
+    resize(len,basic_value);
+};
