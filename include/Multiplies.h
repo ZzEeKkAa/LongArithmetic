@@ -1,6 +1,8 @@
 #ifndef MULTIPLIES_H
 #define MULTIPLIES_H
 
+class Multiplies;
+
 #include "BigInteger.h"
 
 class Multiplies

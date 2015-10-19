@@ -1,5 +1,7 @@
 #include <iostream>
 
+#include "KaratsubaMultiplies.h"
+//#include "Multiplies.h"
 #include "BigInteger.h"
 
 using namespace std;
@@ -10,10 +12,13 @@ int main(){
     v.push_back(2);
     v.push_back(3);
 
-    BigInteger bi(v,10,10);
+    BigInteger bi("5673242",10);
+    BigInteger bi2("5212121",10);
+    BigInteger bi3=bi+bi2;
+    cout<<bi<<"+"<<bi2<<"="<<bi3<<endl;
 
-    for(int i=4; i>=0; --i)
-        cout<<bi[i];
+    Multiplies *mult = new KaratsubaMultiplies();
 
+    cout<<mult->Mult(bi,bi2)<<endl;
 
 }

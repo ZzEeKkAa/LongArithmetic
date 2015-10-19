@@ -1,4 +1,5 @@
 #include "KaratsubaMultiplies.h"
+#include <iostream>
 
 KaratsubaMultiplies::KaratsubaMultiplies()
 {
@@ -10,47 +11,32 @@ KaratsubaMultiplies::~KaratsubaMultiplies()
     //dtor
 }
 
-BigInteger KaratsubaMultiplies::Mult(BigInteger&num1, BigInteger&num2){
-    BigInteger ans(0,10);
+BigInteger KaratsubaMultiplies::Mult(BigInteger&A, BigInteger&B){
+    int s1=A.GetSize();
+    int s2=B.GetSize();
 
-    int s1=num1.GetSize();
-    int s2=num2.GetSize();
+    int n,m,k;
+    for(n=1, m=0; n<s1 || n<s2; n=n<<1,++m); k=n>>1;
 
-    int b_sys = num1.GetSystem();
+    if(n==1){
+        int ans = A[0]*B[0];
+        BigInteger AB;
+        AB[0]=ans%A.GetSystem();
+        int second = ans/A.GetSystem();
+        if(second) AB[1]=second;
+        return AB;
+    }
 
-    int n=1, m=0;
+    BigInteger A1 = A, A2 = A>>k;
+    A1.Resize(k);
 
-    for(; n<s1 || n<s2; n=n<<1,++m);
+    BigInteger B1 = B, B2 = B>>k;
+    B1.Resize(k);
 
-    int k=n>>1;
+    BigInteger A1B1 = Mult(A1,B1);
+    BigInteger A2B2 = Mult(A2,B2);
 
-    std::vector<int> v;
-    v.assign(k,0);
+    BigInteger AB=A1B1+  (((A1+A2)*(B1+B2)-(A1B1+A2B2))<<k)  + (A2B2<<n);
 
-    for(int i=s1-1; i>=k; --k)
-        v[i]=num1[i];
-
-    BigInteger x1(v,b_sys,b_sys);
-
-    for(int i=std::min(s1,k)-1; i>=0; --k)
-        v[i]=num1[i];
-
-    BigInteger x2(v,b_sys,b_sys);
-
-    v.assign(k,0);
-
-    for(int i=s2-1; i>=k; --k)
-        v[i]=num2[i];
-
-    BigInteger y1(v,b_sys,b_sys);
-
-    for(int i=std::min(s2,k)-1; i>=0; --k)
-        v[i]=num2[i];
-
-    BigInteger y2(v,b_sys,b_sys);
-
-    Mult(x1,y1)+( )
-
-
-    return ans;
+    return AB;
 };
