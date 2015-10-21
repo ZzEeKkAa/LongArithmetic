@@ -1,9 +1,9 @@
 #include "BigInteger.h"
 #include <iostream>
+#include <algorithm>
 
 BigInteger::BigInteger(const BigInteger& integer){
     //ctor
-    nll=new int;
     num.assign(integer.num.begin(),integer.num.end());
     system=integer.system;
     negative=integer.negative;
@@ -11,14 +11,20 @@ BigInteger::BigInteger(const BigInteger& integer){
 
 BigInteger::BigInteger(std::string &snum, int system){
     //ctor
-    nll=new int;
     num.assign(snum.size(),0);
     if(system<1) throw 1;
-    for(int i=0; i<num.size(); ++i){
+
+    int i=0;
+
+    negative=false;
+    if(snum[0]=='-') { negative=true; ++i; }
+
+    for(; i<num.size(); ++i){
         if(snum[i]>='A' && snum[i]<='Z') num[num.size()-i-1]=snum[i]-'A'+10; else
         if(snum[i]>='0' && snum[i]<='9') num[num.size()-i-1]=snum[i]-'0'; else
         throw 1;
     }
+    if(negative) num.resize(num.size()-1);
 
     for(int i=0; i<num.size(); ++i)
         if(num[i]>=system)
@@ -66,6 +72,7 @@ const BigInteger operator-(const BigInteger& i){
         integer.negative=false;
     else
         integer.negative=true;
+    return integer;
 }
 
 
@@ -97,15 +104,45 @@ const BigInteger operator-(const BigInteger& left, const BigInteger& right){
         return(left+(-right));
     }
 
-    BigInteger integer;
+    BigInteger integer("0");
 
-    /*
-    for(int i=0,st=0; i<right.GetSize() || st>0; ++i){
-        integer[i]+=right.GetAt(i)+st;
-        st=integer[i]/integer.GetSystem();
-        if(st) integer[i]%=integer.GetSystem();
-    }*/
+    int d=0;
+    if(!left.IsNegative()){
+        if(left<right){
+            //std::cout<<"HERE"<<std::endl;
+            integer=-integer;
+            for(int i=0; i<right.GetSize(); ++i){
+                integer[i]=d+right.GetAt(i)-left.GetAt(i);
+                if(integer[i]<0) { integer[i]+=integer.GetSystem(); d=-1;}
+                else d=0;
+            }
+        }
+        else {
+            for(int i=0; i<left.GetSize(); ++i){
+                integer[i]=d+left.GetAt(i)-right.GetAt(i);
+                if(integer[i]<0) { integer[i]+=integer.GetSystem(); d=-1;}
+                else d=0;
+            }
+        }
+    } else {
+        if(left>right){
+            for(int i=0; i<right.GetSize(); ++i){
+                integer[i]=d+right.GetAt(i)-left.GetAt(i);
+                if(integer[i]<0) { integer[i]+=integer.GetSystem(); d=-1;}
+                else d=0;
+            }
+        }
+        else {
+            integer=-integer;
+            for(int i=0; i<left.GetSize(); ++i){
+                integer[i]=d+left.GetAt(i)-right.GetAt(i);
+                if(integer[i]<0) { integer[i]+=integer.GetSystem(); d=-1;}
+                else d=0;
+            }
+        }
+    }
 
+    integer.ClearFirstZeros();
     return integer;
 }
 
@@ -116,16 +153,24 @@ int &BigInteger::operator[](const int pos){
     return num[pos];
 }
 
-friend bool operator>(const BigInteger& left, const BigInteger& right){
+bool operator>(const BigInteger& left, const BigInteger& right){
     if(right.IsNegative() && !left.IsNegative())
         return true;
-    if(!right.IsNegative() && !left.IsNegative()){
-        if(left.GetSize()>right.GetSize()) return true;
-        if(left.GetSize()==right.GetSize() && left[left.GetSize()-1]>right[right]
+    if(!right.IsNegative() && left.IsNegative())
+        return false;
+    else{
+        //std::cout<<"HERE"<<std::endl;
+        int s=left.GetSize(); if(s<right.GetSize()) s=right.GetSize();
+        while(s>=0 && left.GetAt(s)==right.GetAt(s)) --s;
+        if(s==-1) return false;
+        if(left.IsNegative())
+            return left.GetAt(s)<right.GetAt(s);
+        else
+            return left.GetAt(s)>right.GetAt(s);
     }
 }
 
-friend bool operator<(const BigInteger& left, const BigInteger& right){
+bool operator<(const BigInteger& left, const BigInteger& right){
     return right>left;
 }
 
@@ -135,6 +180,7 @@ int BigInteger::GetAt(int pos) const{
 }
 
 std::ostream&operator<<(std::ostream&out, const BigInteger& integer){
+    if(integer.negative) out<<'-';
     for(int i=integer.num.size()-1; i>=0; --i)
         out<<integer.num[i];
     return out;
@@ -154,7 +200,21 @@ const BigInteger BigInteger::operator>>(int bits) const{
     for(int i=bits; i<num.size(); ++i){
         integer.num[i-bits]=num[i];
     }
-    integer.num.resize(num.size()-bits);
+    integer.num.resize(std::max<int>(0,num.size()-bits));
     return integer;
 }
 
+
+void BigInteger::SetDefaultMultiplication(Multiplies* multiplies){
+    this->multiplies = multiplies;
+}
+const BigInteger operator*(const BigInteger& left, const BigInteger& right){
+    return left.multiplies->Mult(left,right);
+}
+
+void BigInteger::ClearFirstZeros(){
+    int size=num.size()-1;
+
+    for(; size>0 && num[size]==0; --size); ++size;
+    num.resize(size);
+}

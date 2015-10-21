@@ -10,9 +10,10 @@ class Multiplies
     public:
         Multiplies();
         virtual ~Multiplies();
-        virtual BigInteger Mult(BigInteger &num1, BigInteger &num2);
+        virtual BigInteger Mult(const BigInteger &num1, const BigInteger &num2);
     protected:
     private:
+        BigInteger MultByNum(const BigInteger &num, int a);
 };
 
 #endif // MULTIPLIES_H

@@ -9,7 +9,7 @@ class KaratsubaMultiplies : public Multiplies
     public:
         KaratsubaMultiplies();
         virtual ~KaratsubaMultiplies();
-        BigInteger Mult(BigInteger&num1, BigInteger&num2);
+        BigInteger Mult(const BigInteger&num1, const BigInteger&num2);
     protected:
     private:
 };

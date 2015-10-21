@@ -63,12 +63,13 @@ class BigInteger
         int &operator[](const int pos);
         int GetAt(int pos) const;
         virtual ~BigInteger();
+        void ClearFirstZeros();
     protected:
     private:
         std::vector<int> num;
         int system;
         bool negative;
-        int *nll;
+        Multiplies* multiplies;
 };
 
 #endif // BIGINTEGER_H
