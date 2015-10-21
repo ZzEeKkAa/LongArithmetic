@@ -36,10 +36,12 @@
 		<Unit filename="include/BigInteger.h" />
 		<Unit filename="include/KaratsubaMultiplies.h" />
 		<Unit filename="include/Multiplies.h" />
+		<Unit filename="include/ToomCookMultiplication.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/BigInteger.cpp" />
 		<Unit filename="src/KaratsubaMultiplies.cpp" />
 		<Unit filename="src/Multiplies.cpp" />
+		<Unit filename="src/ToomCookMultiplication.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
