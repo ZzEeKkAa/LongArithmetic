@@ -27,8 +27,8 @@ int main(){
 
     //cout<<bi<<endl;
 
-    //Multiplies *mult = new ToomCookMultiplies();
-    Multiplies *mult = new KaratsubaMultiplies();
+    Multiplies *mult = new ToomCookMultiplies();
+    //Multiplies *mult = new KaratsubaMultiplies();
     //Multiplies *mult = new Multiplies();
 
     bi.SetDefaultMultiplication(mult);

@@ -41,7 +41,17 @@ BigInteger::~BigInteger()
 }
 
 void BigInteger::ConvertTo(int system){
-
+    if(this->system==10 && system==10000){
+        this->system=system;
+        int d=0;
+        for(int i=0; i<num.size(); ++i){
+            d*=10; d+=num[i];
+            if(i%4==3){
+                num[i/4]=d;
+            }
+            if(d!=0) num[(num.size()-1)/4]=d;
+        }
+    }
 }
 
 int BigInteger::GetSystem() const{

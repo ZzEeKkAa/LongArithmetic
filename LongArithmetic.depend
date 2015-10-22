@@ -37,3 +37,41 @@
 1445463989 d:\programs\projects\3semestr\longarithmetic\include\toomcookmultiplication.h
 	"Multiplies.h"
 
+1445525903 source:c:\users\zeka\documents\github\longarithmetic\src\biginteger.cpp
+	"BigInteger.h"
+	<iostream>
+	<algorithm>
+
+1445525903 c:\users\zeka\documents\github\longarithmetic\include\biginteger.h
+	<vector>
+	<string>
+	<ostream>
+	"Multiplies.h"
+
+1445525903 c:\users\zeka\documents\github\longarithmetic\include\multiplies.h
+	"BigInteger.h"
+
+1445526877 source:c:\users\zeka\documents\github\longarithmetic\src\karatsubamultiplies.cpp
+	"KaratsubaMultiplies.h"
+	<iostream>
+
+1445525903 c:\users\zeka\documents\github\longarithmetic\include\karatsubamultiplies.h
+	<Multiplies.h>
+
+1445525903 source:c:\users\zeka\documents\github\longarithmetic\src\multiplies.cpp
+	"Multiplies.h"
+	<iostream>
+
+1445527155 source:c:\users\zeka\documents\github\longarithmetic\src\toomcookmultiplication.cpp
+	"ToomCookMultiplication.h"
+
+1445525903 c:\users\zeka\documents\github\longarithmetic\include\toomcookmultiplication.h
+	"Multiplies.h"
+
+1445527109 source:c:\users\zeka\documents\github\longarithmetic\main.cpp
+	<iostream>
+	<stdio.h>
+	"KaratsubaMultiplies.h"
+	"ToomCookMultiplication.h"
+	"BigInteger.h"
+
