@@ -48,9 +48,11 @@ void BigInteger::ConvertTo(int system){
             d*=10; d+=num[i];
             if(i%4==3){
                 num[i/4]=d;
+                d=0;
             }
-            if(d!=0) num[(num.size()-1)/4]=d;
         }
+        if(d!=0) num[(num.size()-1)/4]=d;
+        num.resize( (num.size()-1)/4+1 );
     }
 }
 
@@ -114,7 +116,7 @@ const BigInteger operator-(const BigInteger& left, const BigInteger& right){
         return(left+(-right));
     }
 
-    BigInteger integer("0");
+    BigInteger integer("0",left.GetSystem());
 
     int d=0;
     if(!left.IsNegative()){
@@ -197,7 +199,7 @@ std::ostream&operator<<(std::ostream&out, const BigInteger& integer){
 }
 
 const BigInteger BigInteger::operator<<(int bits) const{
-    BigInteger integer;
+    BigInteger integer("0",system);
     integer.num.assign(num.size()+bits,0);
     for(int i=0; i<num.size(); ++i){
         integer.num[i+bits]=num[i];

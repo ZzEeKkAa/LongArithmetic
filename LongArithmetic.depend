@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1445459961 source:d:\programs\projects\3semestr\longarithmetic\src\biginteger.cpp
+1445526541 source:d:\programs\projects\3semestr\longarithmetic\src\biginteger.cpp
 	"BigInteger.h"
 	<iostream>
 	<algorithm>
@@ -10,14 +10,14 @@
 	<ostream>
 	"Multiplies.h"
 
-1445464511 source:d:\programs\projects\3semestr\longarithmetic\main.cpp
+1445527335 source:d:\programs\projects\3semestr\longarithmetic\main.cpp
 	<iostream>
 	<stdio.h>
 	"KaratsubaMultiplies.h"
 	"ToomCookMultiplication.h"
 	"BigInteger.h"
 
-1445464893 source:d:\programs\projects\3semestr\longarithmetic\src\karatsubamultiplies.cpp
+1445525055 source:d:\programs\projects\3semestr\longarithmetic\src\karatsubamultiplies.cpp
 	"KaratsubaMultiplies.h"
 	<iostream>
 
@@ -27,11 +27,11 @@
 1445460550 d:\programs\projects\3semestr\longarithmetic\include\multiplies.h
 	"BigInteger.h"
 
-1445461377 source:d:\programs\projects\3semestr\longarithmetic\src\multiplies.cpp
+1445526316 source:d:\programs\projects\3semestr\longarithmetic\src\multiplies.cpp
 	"Multiplies.h"
 	<iostream>
 
-1445463977 source:d:\programs\projects\3semestr\longarithmetic\src\toomcookmultiplication.cpp
+1445525055 source:d:\programs\projects\3semestr\longarithmetic\src\toomcookmultiplication.cpp
 	"ToomCookMultiplication.h"
 
 1445463989 d:\programs\projects\3semestr\longarithmetic\include\toomcookmultiplication.h
