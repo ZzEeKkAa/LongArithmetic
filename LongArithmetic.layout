@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Release" />
-	<File name="include\Multiplies.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="303" topLine="0" />
-		</Cursor>
-	</File>
 	<File name="include\ToomCookMultiplication.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="116" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\BigInteger.h" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1632" topLine="1" />
+		</Cursor>
+	</File>
+	<File name="src\KaratsubaMultiplies.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="421" topLine="8" />
+		</Cursor>
+	</File>
+	<File name="src\ToomCookMultiplication.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="845" topLine="16" />
 		</Cursor>
 	</File>
 	<File name="include\KaratsubaMultiplies.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -16,9 +26,19 @@
 			<Cursor1 position="227" topLine="0" />
 		</Cursor>
 	</File>
+	<File name="src\Multiplies.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="419" topLine="5" />
+		</Cursor>
+	</File>
+	<File name="include\Multiplies.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="354" topLine="0" />
+		</Cursor>
+	</File>
 	<File name="src\BigInteger.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2972" topLine="61" />
+			<Cursor1 position="6126" topLine="154" />
 		</Cursor>
 		<Folding>
 			<Collapse line="4" />
@@ -30,41 +50,11 @@
 			<Collapse line="69" />
 			<Collapse line="73" />
 			<Collapse line="80" />
-			<Collapse line="160" />
-			<Collapse line="167" />
-			<Collapse line="184" />
-			<Collapse line="188" />
-			<Collapse line="193" />
-			<Collapse line="200" />
-			<Collapse line="209" />
-			<Collapse line="219" />
-			<Collapse line="222" />
-			<Collapse line="226" />
 		</Folding>
 	</File>
-	<File name="src\KaratsubaMultiplies.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="757" topLine="13" />
-		</Cursor>
-	</File>
-	<File name="src\ToomCookMultiplication.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="569" topLine="9" />
-		</Cursor>
-	</File>
-	<File name="main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="485" topLine="16" />
-		</Cursor>
-	</File>
-	<File name="include\BigInteger.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2392" topLine="26" />
-		</Cursor>
-	</File>
-	<File name="src\Multiplies.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="383" topLine="0" />
+			<Cursor1 position="551" topLine="12" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
