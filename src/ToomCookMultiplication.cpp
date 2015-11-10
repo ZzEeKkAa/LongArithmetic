@@ -39,7 +39,7 @@ BigInteger ToomCookMultiplies::Mult(const BigInteger&A, const BigInteger&B){
     BigInteger A2B2 = Mult(A2,B2);
     BigInteger A3B3 = Mult(A3,B3);
 
-    BigInteger AB=A1B1+  (( Mult(A1+A2,B1+B2)-(A1B1+A2B2))<<k)+  (( Mult(A1+A3,B1+B3)-(A1B1+A3B3)+A2B2)<<2*k) + (( Mult(A2+A3,B2+B3)-(A2B2+A3B3))<<n) + (A3B3<<n+k);
+    BigInteger AB=A1B1+  (( Mult(A1+A2,B1+B2)-(A1B1+A2B2))<<k)+  (( Mult(A1+A3,B1+B3)-(A1B1+A3B3)+A2B2)<<2*k) + (( Mult(A2+A3,B2+B3)-(A2B2+A3B3))<<3*k) + (A3B3<<4*k);
 
     AB.ClearFirstZeros();
     return AB;
