@@ -120,7 +120,7 @@
 1447173808 c:\users\oleg\documents\github\longarithmetic\include\schonhagemulriplies.h
 	"Multiplies.h"
 
-1447192996 source:c:\users\oleg\documents\github\longarithmetic\main.cpp
+1447194086 source:c:\users\oleg\documents\github\longarithmetic\main.cpp
 	<iostream>
 	<stdio.h>
 	"KaratsubaMultiplies.h"
@@ -129,9 +129,8 @@
 	"BigInteger.h"
 	"CookDivide.h"
 
-1447192380 source:c:\users\oleg\documents\github\longarithmetic\src\cookdivide.cpp
+1447194046 source:c:\users\oleg\documents\github\longarithmetic\src\cookdivide.cpp
 	"CookDivide.h"
-	"SchonhageMulriplies.h"
 
 1447193095 c:\users\oleg\documents\github\longarithmetic\include\cookdivide.h
 	"BigInteger.h"

@@ -26,7 +26,7 @@ int main(){
 
     BigInteger bi (s1,10);
     BigInteger bi2(s2,10);
-    BigInteger a("234223",10), b("17",10);
+    BigInteger a("2342232342232342233454326234523",10), b("73",10);
     //cout<<bi<<endl;
     bi.ConvertTo(10000);
     bi2.ConvertTo(10000);
