@@ -75,3 +75,64 @@
 	"ToomCookMultiplication.h"
 	"BigInteger.h"
 
+1447192954 source:c:\users\oleg\documents\github\longarithmetic\src\biginteger.cpp
+	"BigInteger.h"
+	<iostream>
+	<algorithm>
+
+1447192467 c:\users\oleg\documents\github\longarithmetic\include\biginteger.h
+	<vector>
+	<string>
+	<ostream>
+	"Multiplies.h"
+
+1447173808 c:\users\oleg\documents\github\longarithmetic\include\multiplies.h
+	"BigInteger.h"
+
+1447173808 source:c:\users\oleg\documents\github\longarithmetic\src\karatsubamultiplies.cpp
+	"KaratsubaMultiplies.h"
+	<iostream>
+
+1447173808 c:\users\oleg\documents\github\longarithmetic\include\karatsubamultiplies.h
+	<Multiplies.h>
+
+1447173808 source:c:\users\oleg\documents\github\longarithmetic\src\multiplies.cpp
+	"Multiplies.h"
+	<iostream>
+
+1447173808 source:c:\users\oleg\documents\github\longarithmetic\src\toomcookmultiplication.cpp
+	"ToomCookMultiplication.h"
+
+1447173808 c:\users\oleg\documents\github\longarithmetic\include\toomcookmultiplication.h
+	"Multiplies.h"
+
+1447173808 source:c:\users\oleg\documents\github\longarithmetic\src\algorithms.cpp
+	"Algorithms.h"
+
+1447173808 c:\users\oleg\documents\github\longarithmetic\include\algorithms.h
+	<vector>
+	<complex>
+
+1447173808 source:c:\users\oleg\documents\github\longarithmetic\src\schonhagemulriplies.cpp
+	"SchonhageMulriplies.h"
+	"Algorithms.h"
+
+1447173808 c:\users\oleg\documents\github\longarithmetic\include\schonhagemulriplies.h
+	"Multiplies.h"
+
+1447192996 source:c:\users\oleg\documents\github\longarithmetic\main.cpp
+	<iostream>
+	<stdio.h>
+	"KaratsubaMultiplies.h"
+	"ToomCookMultiplication.h"
+	"SchonhageMulriplies.h"
+	"BigInteger.h"
+	"CookDivide.h"
+
+1447192380 source:c:\users\oleg\documents\github\longarithmetic\src\cookdivide.cpp
+	"CookDivide.h"
+	"SchonhageMulriplies.h"
+
+1447193095 c:\users\oleg\documents\github\longarithmetic\include\cookdivide.h
+	"BigInteger.h"
+

@@ -216,9 +216,9 @@ const BigInteger BigInteger::operator>>(int bits) const{
     return integer;
 }
 
-
+Multiplies *BigInteger::multiplies=NULL;
 void BigInteger::SetDefaultMultiplication(Multiplies* multiplies){
-    this->multiplies = multiplies;
+    BigInteger::multiplies = multiplies;
 }
 const BigInteger operator*(const BigInteger& left, const BigInteger& right){
     return left.multiplies->Mult(left,right);

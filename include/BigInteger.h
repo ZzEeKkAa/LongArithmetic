@@ -49,7 +49,7 @@ class BigInteger
          */
         void Resize(int len, int defaultValue=0);
         bool IsNegative() const;
-        void SetDefaultMultiplication(Multiplies* multiplies);
+        static void SetDefaultMultiplication(Multiplies* multiplies);
         friend const BigInteger operator-(const BigInteger& i);
         friend const BigInteger operator*(const BigInteger& left, const BigInteger& right);
         friend const BigInteger operator+(const BigInteger& left, const BigInteger& right);
@@ -69,7 +69,7 @@ class BigInteger
         std::vector<int> num;
         int system;
         bool negative;
-        Multiplies* multiplies;
+        static Multiplies* multiplies;
 };
 
 #endif // BIGINTEGER_H

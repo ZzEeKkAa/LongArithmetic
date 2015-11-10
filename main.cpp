@@ -3,8 +3,10 @@
 
 #include "KaratsubaMultiplies.h"
 #include "ToomCookMultiplication.h"
+#include "SchonhageMulriplies.h"
 //#include "Multiplies.h"
 #include "BigInteger.h"
+#include "CookDivide.h"
 
 using namespace std;
 
@@ -17,25 +19,30 @@ int main(){
 
     string s1="12",s2="16";
 
-    s1.assign(1000,'2');
-    s2.assign(1000,'1');
+    s1.assign(100000,'2');
+    s2.assign(100000,'1');
 
     //cout<<s1;
 
     BigInteger bi (s1,10);
     BigInteger bi2(s2,10);
+    BigInteger a("234223",10), b("17",10);
     //cout<<bi<<endl;
-    //bi.ConvertTo(10000);
-    //bi2.ConvertTo(10000);
+    bi.ConvertTo(10000);
+    bi2.ConvertTo(10000);
+
 
     //cout<<bi<<endl;
 
+    CookDivide *divide = new CookDivide();
     //Multiplies *mult = new ToomCookMultiplies();
-    Multiplies *mult = new KaratsubaMultiplies();
-    //Multiplies *mult2 = new Multiplies();
+    Multiplies *mult2 = new KaratsubaMultiplies();
+    //Multiplies *mult = new Multiplies();
+    Multiplies *mult = new SchonhageMulriplies();
 
-    bi.SetDefaultMultiplication(mult);
-    //bi2.SetDefaultMultiplication(mult2);
+    BigInteger::SetDefaultMultiplication(mult);
+
+    cout<<divide->Div(a,b)<<endl;
 
     BigInteger bi3 = bi*bi2;
 
@@ -44,6 +51,6 @@ int main(){
 
     //cout<<"D: "<<(bi2*bi)-(bi*bi2)<<endl;
 
-    cout<<bi<<"*"<<bi2<<"="<<endl<<endl<<bi3<<endl;/*/**/
+    //cout<<bi<<"*"<<bi2<<"="<<endl<<endl<<bi3<<endl;/*/**/
 
 }
