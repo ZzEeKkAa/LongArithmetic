@@ -106,6 +106,7 @@ const BigInteger operator+(const BigInteger& left, const BigInteger& right){
         if(st) integer[i]%=integer.GetSystem();
     }
 
+    integer.ClearFirstZeros();
     return integer;
 }
 
@@ -185,6 +186,16 @@ bool operator>(const BigInteger& left, const BigInteger& right){
 
 bool operator<(const BigInteger& left, const BigInteger& right){
     return right>left;
+}
+
+bool operator==(const BigInteger& left, const BigInteger& right){
+    BigInteger d=left-right;
+    if(d.GetSize()==1 && d[0]==0) return true;
+    return false;
+}
+
+bool operator!=(const BigInteger& left, const BigInteger& right){
+    return !(left==right);
 }
 
 int BigInteger::GetAt(int pos) const{

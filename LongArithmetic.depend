@@ -37,43 +37,48 @@
 1445463989 d:\programs\projects\3semestr\longarithmetic\include\toomcookmultiplication.h
 	"Multiplies.h"
 
-1445593599 source:c:\users\zeka\documents\github\longarithmetic\src\biginteger.cpp
+1447280981 source:c:\users\zeka\documents\github\longarithmetic\src\biginteger.cpp
 	"BigInteger.h"
+	"CookDivide.h"
 	<iostream>
 	<algorithm>
 
-1445525903 c:\users\zeka\documents\github\longarithmetic\include\biginteger.h
+1447276172 c:\users\zeka\documents\github\longarithmetic\include\biginteger.h
 	<vector>
 	<string>
 	<ostream>
 	"Multiplies.h"
 
-1445525903 c:\users\zeka\documents\github\longarithmetic\include\multiplies.h
+1447274406 c:\users\zeka\documents\github\longarithmetic\include\multiplies.h
 	"BigInteger.h"
+	"Algorithms.h"
 
-1445595722 source:c:\users\zeka\documents\github\longarithmetic\src\karatsubamultiplies.cpp
+1445592122 source:c:\users\zeka\documents\github\longarithmetic\src\karatsubamultiplies.cpp
 	"KaratsubaMultiplies.h"
 	<iostream>
 
-1445525903 c:\users\zeka\documents\github\longarithmetic\include\karatsubamultiplies.h
+1445522303 c:\users\zeka\documents\github\longarithmetic\include\karatsubamultiplies.h
 	<Multiplies.h>
 
-1445525903 source:c:\users\zeka\documents\github\longarithmetic\src\multiplies.cpp
+1445522303 source:c:\users\zeka\documents\github\longarithmetic\src\multiplies.cpp
 	"Multiplies.h"
 	<iostream>
 
-1445595838 source:c:\users\zeka\documents\github\longarithmetic\src\toomcookmultiplication.cpp
+1447274406 source:c:\users\zeka\documents\github\longarithmetic\src\toomcookmultiplication.cpp
 	"ToomCookMultiplication.h"
 
-1445525903 c:\users\zeka\documents\github\longarithmetic\include\toomcookmultiplication.h
+1447274406 c:\users\zeka\documents\github\longarithmetic\include\toomcookmultiplication.h
 	"Multiplies.h"
 
-1445595579 source:c:\users\zeka\documents\github\longarithmetic\main.cpp
+1447284347 source:c:\users\zeka\documents\github\longarithmetic\main.cpp
 	<iostream>
 	<stdio.h>
 	"KaratsubaMultiplies.h"
 	"ToomCookMultiplication.h"
+	"SchonhageMulriplies.h"
 	"BigInteger.h"
+	"CookDivide.h"
+	"PollardFactorization.h"
 
 1447266548 source:c:\users\oleg\documents\github\longarithmetic\src\biginteger.cpp
 	"BigInteger.h"
@@ -155,4 +160,49 @@
 
 1447265534 c:\users\oleg\documents\github\longarithmetic\include\pollardfactorization.h
 	"Factorization.h"
+
+1447276277 c:\users\zeka\documents\github\longarithmetic\include\algorithms.h
+	"BigInteger.h"
+	<vector>
+	<complex>
+
+1447274406 c:\users\zeka\documents\github\longarithmetic\include\schonhagemulriplies.h
+	"Multiplies.h"
+
+1447274406 c:\users\zeka\documents\github\longarithmetic\include\cookdivide.h
+	"BigInteger.h"
+
+1447283605 source:c:\users\zeka\documents\github\longarithmetic\src\algorithms.cpp
+	"Algorithms.h"
+	"BigInteger.h"
+	<cstdlib>
+	<ctime>
+	<iostream>
+
+1447284250 source:c:\users\zeka\documents\github\longarithmetic\src\cookdivide.cpp
+	"CookDivide.h"
+
+1447274406 source:c:\users\zeka\documents\github\longarithmetic\src\factorization.cpp
+	"Factorization.h"
+
+1447274406 c:\users\zeka\documents\github\longarithmetic\include\factorization.h
+	"BigInteger.h"
+	"Algorithms.h"
+
+1447274406 source:c:\users\zeka\documents\github\longarithmetic\src\karatsuba3multiplication.cpp
+	"Karatsuba3Multiplication.h"
+
+1447274406 c:\users\zeka\documents\github\longarithmetic\include\karatsuba3multiplication.h
+	"Multiplies.h"
+
+1447283571 source:c:\users\zeka\documents\github\longarithmetic\src\pollardfactorization.cpp
+	"PollardFactorization.h"
+	<iostream>
+
+1447274406 c:\users\zeka\documents\github\longarithmetic\include\pollardfactorization.h
+	"Factorization.h"
+
+1447274406 source:c:\users\zeka\documents\github\longarithmetic\src\schonhagemulriplies.cpp
+	"SchonhageMulriplies.h"
+	"Algorithms.h"
 

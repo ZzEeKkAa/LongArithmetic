@@ -58,6 +58,8 @@ class BigInteger
         friend const BigInteger operator-(const BigInteger& left, const BigInteger& right);
         friend bool operator>(const BigInteger& left, const BigInteger& right);
         friend bool operator<(const BigInteger& left, const BigInteger& right);
+        friend bool operator==(const BigInteger& left, const BigInteger& right);
+        friend bool operator!=(const BigInteger& left, const BigInteger& right);
         BigInteger& operator=(const BigInteger& newInteger);
         const BigInteger operator<<(int bits) const;
         const BigInteger operator>>(int bits) const;

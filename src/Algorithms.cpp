@@ -1,4 +1,8 @@
 #include "Algorithms.h"
+#include "BigInteger.h"
+
+#include <cstdlib>
+#include <ctime>
 
 #define PI 3.14159265359
 
@@ -35,4 +39,32 @@ void Algorithms::FastFourierTransform(std::vector<std::complex<long double> > & 
 	if (invert)
 		for (int i=0; i<n; ++i)
 			a[i] /= n;
+}
+
+BigInteger Algorithms::Random(BigInteger const &minimal, BigInteger const &maximal){
+    BigInteger d(maximal-minimal);
+    srand(time(NULL));
+    BigInteger ans("0",d.GetSystem());
+    for(int i=0; i<d.GetSize(); ++i){
+        ans[i]=rand()%ans.GetSystem();
+    }
+    ans[d.GetSize()-1]=ans[d.GetSize()-1]%d[d.GetSize()-1];
+    return ans+minimal;
+}
+
+#include <iostream>
+BigInteger Algorithms::gcd(BigInteger a, BigInteger b){
+    //if() return a;
+    BigInteger zero("0",a.GetSystem());
+    while(a!=zero && b!=zero){
+        std::cout<<"iteration "<<a<<" "<<b<<std::endl;
+        if(a>b) a=a%b;
+        else b=b%a;
+    }
+
+    return a+b;
+}
+BigInteger Algorithms::abs(BigInteger const &a){
+    if(a.IsNegative()) return -a;
+    return a;
 }

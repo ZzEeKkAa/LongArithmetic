@@ -7,6 +7,7 @@
 //#include "Multiplies.h"
 #include "BigInteger.h"
 #include "CookDivide.h"
+#include "PollardFactorization.h"
 
 using namespace std;
 
@@ -19,26 +20,26 @@ int main(){
 
     string s1="12",s2="16";
 
-    s1.assign(20000,'2');
-    s2.assign(20000,'1');
+    s1.assign(20,'3');
+    s2.assign(20,'1');
 
     //cout<<s1;
 
     BigInteger bi (s1,10);
     BigInteger bi2(s2,10);
-    BigInteger a("2342232342232342233454326234523",10), b("73",10);
+    //BigInteger a("22435245647",10), b("33651",10);
+    BigInteger a("22435245647",10), b("33659",10);
     //cout<<bi<<endl;
-    bi.ConvertTo(10000);
-    bi2.ConvertTo(10000);
-
+    //bi.ConvertTo(1000);
+    //bi2.ConvertTo(1000);
 
     //cout<<bi<<endl;
 
-    //CookDivide *divide = new CookDivide();
-    Multiplies *mult = new ToomCookMultiplies();
-    Multiplies *mult1 = new KaratsubaMultiplies();
+    CookDivide *divide = new CookDivide();
+    //Multiplies *mult = new ToomCookMultiplies();
+    //Multiplies *mult1 = new KaratsubaMultiplies();
     //Multiplies *mult = new Multiplies();
-    //Multiplies *mult = new SchonhageMulriplies();
+    Multiplies *mult = new SchonhageMulriplies();
 
     //BigInteger::SetDefaultMultiplication(mult);
     BigInteger::SetDefaultMultiplication(mult);
@@ -46,6 +47,11 @@ int main(){
     //cout<<divide->Div(a,b)<<endl;
 
     BigInteger bi3 = bi*bi2;
+
+    Factorization *fact = new PollardFactorization();
+
+    cout<<fact->GetFactor(bi3)<<"|"<<bi3<<endl;
+
 
 
 
