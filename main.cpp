@@ -19,8 +19,8 @@ int main(){
 
     string s1="12",s2="16";
 
-    s1.assign(100000,'2');
-    s2.assign(100000,'1');
+    s1.assign(20000,'2');
+    s2.assign(20000,'1');
 
     //cout<<s1;
 
@@ -34,17 +34,25 @@ int main(){
 
     //cout<<bi<<endl;
 
-    CookDivide *divide = new CookDivide();
-    //Multiplies *mult = new ToomCookMultiplies();
-    Multiplies *mult2 = new KaratsubaMultiplies();
+    //CookDivide *divide = new CookDivide();
+    Multiplies *mult = new ToomCookMultiplies();
+    Multiplies *mult1 = new KaratsubaMultiplies();
     //Multiplies *mult = new Multiplies();
-    Multiplies *mult = new SchonhageMulriplies();
+    //Multiplies *mult = new SchonhageMulriplies();
 
+    //BigInteger::SetDefaultMultiplication(mult);
     BigInteger::SetDefaultMultiplication(mult);
 
-    cout<<divide->Div(a,b)<<endl;
+    //cout<<divide->Div(a,b)<<endl;
 
     BigInteger bi3 = bi*bi2;
+
+
+
+    //BigInteger::SetDefaultMultiplication(mult1);
+    //cout<<bi3-bi*bi2;
+
+    //cout<<bi*bi2-bi3<<endl;
 
     //cout<<"First:  "<<(bi*bi2)<<endl;
     //cout<<"Second: "<<(bi2*bi)<<endl;

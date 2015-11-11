@@ -12,8 +12,8 @@ class Multiplies
         virtual ~Multiplies();
         virtual BigInteger Mult(const BigInteger &num1, const BigInteger &num2);
     protected:
-    private:
         BigInteger MultByNum(const BigInteger &num, int a);
+    private:
 };
 
 #endif // MULTIPLIES_H

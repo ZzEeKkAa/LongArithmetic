@@ -1,5 +1,6 @@
 #include "ToomCookMultiplication.h"
 
+
 ToomCookMultiplies::ToomCookMultiplies()
 {
     //ctor
@@ -10,13 +11,26 @@ ToomCookMultiplies::~ToomCookMultiplies()
     //dtor
 }
 
+BigInteger ToomCookMultiplies::DivByNum(const BigInteger &num, int n){
+    BigInteger ans=(num);
+    int buf=0;
+    for(int i=ans.GetSize()-1; i>=0; --i){
+        buf*=ans.GetSystem();
+        buf+=ans[i];
+        ans[i]=buf/n;
+        buf%=n;
+    }
+    ans.ClearFirstZeros();
+    return ans;
+}
+
+
 BigInteger ToomCookMultiplies::Mult(const BigInteger&A, const BigInteger&B){
 
     int s1=A.GetSize();
     int s2=B.GetSize();
 
     int n,k;
-    //for(n=1, m=0; n<s1 || n<s2; n*=3,++m); k=n/3;
     if(s1>s2) n=s1; else n=s2;
     k=n/3;
 
@@ -35,11 +49,41 @@ BigInteger ToomCookMultiplies::Mult(const BigInteger&A, const BigInteger&B){
     B2.Resize(k);
     B2.ClearFirstZeros();
 
-    BigInteger A1B1 = Mult(A1,B1);
-    BigInteger A2B2 = Mult(A2,B2);
-    BigInteger A3B3 = Mult(A3,B3);
+    BigInteger p0, p1, pm1, pm2, pi;
+    p0=A1;
+    p1=A1+A3;
+    pm1=p1-A2;
+    p1=p1+A2;
+    pm2=MultByNum(pm1+A3,2)-A1;
+    pi=A3;
 
-    BigInteger AB=A1B1+  (( Mult(A1+A2,B1+B2)-(A1B1+A2B2))<<k)+  (( Mult(A1+A3,B1+B3)-(A1B1+A3B3)+A2B2)<<2*k) + (( Mult(A2+A3,B2+B3)-(A2B2+A3B3))<<3*k) + (A3B3<<4*k);
+    BigInteger q0, q1, qm1, qm2, qi;
+    q0=B1;
+    q1=B1+B3;
+    qm1=q1-B2;
+    q1=q1+B2;
+    qm2=MultByNum(qm1+B3,2)-B1;
+    qi=B3;
+
+    BigInteger r0, r1, rm1, rm2, ri;
+    r0 =Mult(p0 ,q0);
+    r1 =Mult(p1 ,q1);
+    rm1=Mult(pm1,qm1);
+    rm2=Mult(pm2,qm2);
+    ri =Mult(pi ,qi);
+
+    BigInteger r_0, r_1, r_2, r_3, r_4;
+    r_0=r0;
+    r_4=ri;
+    r_3=DivByNum(rm2-r1,3);
+    r_1=DivByNum(r1-rm1,2);
+    r_2=rm1-r0;
+    r_3=DivByNum(r_2-r_3,2)+MultByNum(ri,2);
+    r_2=r_2+r_1-r_4;
+    r_1=r_1-r_3;
+
+
+    BigInteger AB=r_0+(r_1<<k)+(r_2<<2*k)+(r_3<<3*k)+(r_4<<4*k);
 
     AB.ClearFirstZeros();
     return AB;

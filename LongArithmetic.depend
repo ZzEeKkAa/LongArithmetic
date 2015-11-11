@@ -86,7 +86,7 @@
 	<ostream>
 	"Multiplies.h"
 
-1447173808 c:\users\oleg\documents\github\longarithmetic\include\multiplies.h
+1447248081 c:\users\oleg\documents\github\longarithmetic\include\multiplies.h
 	"BigInteger.h"
 
 1447173808 source:c:\users\oleg\documents\github\longarithmetic\src\karatsubamultiplies.cpp
@@ -100,10 +100,10 @@
 	"Multiplies.h"
 	<iostream>
 
-1447173808 source:c:\users\oleg\documents\github\longarithmetic\src\toomcookmultiplication.cpp
+1447252082 source:c:\users\oleg\documents\github\longarithmetic\src\toomcookmultiplication.cpp
 	"ToomCookMultiplication.h"
 
-1447173808 c:\users\oleg\documents\github\longarithmetic\include\toomcookmultiplication.h
+1447251198 c:\users\oleg\documents\github\longarithmetic\include\toomcookmultiplication.h
 	"Multiplies.h"
 
 1447173808 source:c:\users\oleg\documents\github\longarithmetic\src\algorithms.cpp
@@ -120,7 +120,7 @@
 1447173808 c:\users\oleg\documents\github\longarithmetic\include\schonhagemulriplies.h
 	"Multiplies.h"
 
-1447194086 source:c:\users\oleg\documents\github\longarithmetic\main.cpp
+1447251553 source:c:\users\oleg\documents\github\longarithmetic\main.cpp
 	<iostream>
 	<stdio.h>
 	"KaratsubaMultiplies.h"
@@ -129,9 +129,15 @@
 	"BigInteger.h"
 	"CookDivide.h"
 
-1447194046 source:c:\users\oleg\documents\github\longarithmetic\src\cookdivide.cpp
+1447194201 source:c:\users\oleg\documents\github\longarithmetic\src\cookdivide.cpp
 	"CookDivide.h"
 
 1447193095 c:\users\oleg\documents\github\longarithmetic\include\cookdivide.h
 	"BigInteger.h"
+
+1447247951 source:c:\users\oleg\documents\github\longarithmetic\src\karatsuba3multiplication.cpp
+	"Karatsuba3Multiplication.h"
+
+1447247977 c:\users\oleg\documents\github\longarithmetic\include\karatsuba3multiplication.h
+	"Multiplies.h"
 

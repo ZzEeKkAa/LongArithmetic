@@ -9,6 +9,7 @@ class ToomCookMultiplies : public Multiplies
     public:
         ToomCookMultiplies();
         virtual ~ToomCookMultiplies();
+        BigInteger DivByNum(const BigInteger &num, int n);
         BigInteger Mult(const BigInteger&num1, const BigInteger&num2);
     protected:
     private:
