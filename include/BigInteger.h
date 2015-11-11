@@ -52,6 +52,8 @@ class BigInteger
         static void SetDefaultMultiplication(Multiplies* multiplies);
         friend const BigInteger operator-(const BigInteger& i);
         friend const BigInteger operator*(const BigInteger& left, const BigInteger& right);
+        friend const BigInteger operator/(const BigInteger& left, const BigInteger& right);
+        friend const BigInteger operator%(const BigInteger& left, const BigInteger& right);
         friend const BigInteger operator+(const BigInteger& left, const BigInteger& right);
         friend const BigInteger operator-(const BigInteger& left, const BigInteger& right);
         friend bool operator>(const BigInteger& left, const BigInteger& right);

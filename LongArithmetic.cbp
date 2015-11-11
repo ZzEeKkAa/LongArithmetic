@@ -36,18 +36,22 @@
 		<Unit filename="include/Algorithms.h" />
 		<Unit filename="include/BigInteger.h" />
 		<Unit filename="include/CookDivide.h" />
+		<Unit filename="include/Factorization.h" />
 		<Unit filename="include/Karatsuba3Multiplication.h" />
 		<Unit filename="include/KaratsubaMultiplies.h" />
 		<Unit filename="include/Multiplies.h" />
+		<Unit filename="include/PollardFactorization.h" />
 		<Unit filename="include/SchonhageMulriplies.h" />
 		<Unit filename="include/ToomCookMultiplication.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Algorithms.cpp" />
 		<Unit filename="src/BigInteger.cpp" />
 		<Unit filename="src/CookDivide.cpp" />
+		<Unit filename="src/Factorization.cpp" />
 		<Unit filename="src/Karatsuba3Multiplication.cpp" />
 		<Unit filename="src/KaratsubaMultiplies.cpp" />
 		<Unit filename="src/Multiplies.cpp" />
+		<Unit filename="src/PollardFactorization.cpp" />
 		<Unit filename="src/SchonhageMulriplies.cpp" />
 		<Unit filename="src/ToomCookMultiplication.cpp" />
 		<Extensions>

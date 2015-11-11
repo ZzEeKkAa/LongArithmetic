@@ -4,6 +4,7 @@
 class Multiplies;
 
 #include "BigInteger.h"
+#include "Algorithms.h"
 
 class Multiplies
 {

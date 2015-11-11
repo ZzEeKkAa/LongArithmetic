@@ -75,19 +75,21 @@
 	"ToomCookMultiplication.h"
 	"BigInteger.h"
 
-1447192954 source:c:\users\oleg\documents\github\longarithmetic\src\biginteger.cpp
+1447266548 source:c:\users\oleg\documents\github\longarithmetic\src\biginteger.cpp
 	"BigInteger.h"
+	"CookDivide.h"
 	<iostream>
 	<algorithm>
 
-1447192467 c:\users\oleg\documents\github\longarithmetic\include\biginteger.h
+1447266497 c:\users\oleg\documents\github\longarithmetic\include\biginteger.h
 	<vector>
 	<string>
 	<ostream>
 	"Multiplies.h"
 
-1447248081 c:\users\oleg\documents\github\longarithmetic\include\multiplies.h
+1447264249 c:\users\oleg\documents\github\longarithmetic\include\multiplies.h
 	"BigInteger.h"
+	"Algorithms.h"
 
 1447173808 source:c:\users\oleg\documents\github\longarithmetic\src\karatsubamultiplies.cpp
 	"KaratsubaMultiplies.h"
@@ -120,7 +122,7 @@
 1447173808 c:\users\oleg\documents\github\longarithmetic\include\schonhagemulriplies.h
 	"Multiplies.h"
 
-1447251553 source:c:\users\oleg\documents\github\longarithmetic\main.cpp
+1447252194 source:c:\users\oleg\documents\github\longarithmetic\main.cpp
 	<iostream>
 	<stdio.h>
 	"KaratsubaMultiplies.h"
@@ -140,4 +142,17 @@
 
 1447247977 c:\users\oleg\documents\github\longarithmetic\include\karatsuba3multiplication.h
 	"Multiplies.h"
+
+1447265178 source:c:\users\oleg\documents\github\longarithmetic\src\factorization.cpp
+	"Factorization.h"
+
+1447266751 c:\users\oleg\documents\github\longarithmetic\include\factorization.h
+	"BigInteger.h"
+	"Algorithms.h"
+
+1447266388 source:c:\users\oleg\documents\github\longarithmetic\src\pollardfactorization.cpp
+	"PollardFactorization.h"
+
+1447265534 c:\users\oleg\documents\github\longarithmetic\include\pollardfactorization.h
+	"Factorization.h"
 

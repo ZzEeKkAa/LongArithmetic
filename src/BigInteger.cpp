@@ -1,4 +1,5 @@
 #include "BigInteger.h"
+#include "CookDivide.h"
 #include <iostream>
 #include <algorithm>
 
@@ -220,8 +221,18 @@ Multiplies *BigInteger::multiplies=NULL;
 void BigInteger::SetDefaultMultiplication(Multiplies* multiplies){
     BigInteger::multiplies = multiplies;
 }
+
 const BigInteger operator*(const BigInteger& left, const BigInteger& right){
     return left.multiplies->Mult(left,right);
+}
+
+const BigInteger operator/(const BigInteger& left, const BigInteger& right){
+    static CookDivide *div = new CookDivide();
+    return div->Div(left,right);
+}
+
+const BigInteger operator%(const BigInteger& left, const BigInteger& right){
+    return left-(left/right)*right;
 }
 
 void BigInteger::ClearFirstZeros(){
