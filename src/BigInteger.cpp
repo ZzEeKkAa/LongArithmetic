@@ -35,6 +35,15 @@ BigInteger::BigInteger(std::string &snum, int system){
 
 BigInteger::BigInteger(const char * snum, int system):BigInteger(*new std::string(snum), system){}
 
+BigInteger::BigInteger(long long num, int system){
+    this->negative=false;
+    if(num<0) {this->negative=true; num*=-1;}
+    for(int i=0; num; ++i){
+        (*this)[i]=num%system;
+        num/=system;
+    }
+    this->system=system;
+}
 
 BigInteger::~BigInteger()
 {
@@ -242,6 +251,19 @@ const BigInteger operator/(const BigInteger& left, const BigInteger& right){
     return div->Div(left,right);
 }
 
+const BigInteger operator/(const BigInteger& num, int n){
+    BigInteger ans=(num);
+    int buf=0;
+    for(int i=ans.GetSize()-1; i>=0; --i){
+        buf*=ans.GetSystem();
+        buf+=ans[i];
+        ans[i]=buf/n;
+        buf%=n;
+    }
+    ans.ClearFirstZeros();
+    return ans;
+}
+
 const BigInteger operator%(const BigInteger& left, const BigInteger& right){
     return left-(left/right)*right;
 }
@@ -251,4 +273,12 @@ void BigInteger::ClearFirstZeros(){
 
     for(; size>0 && num[size]==0; --size); ++size;
     num.resize(size);
+}
+
+long long BigInteger::ToLongLong(){
+    long long res=0;
+    for(int i=num.size()-1; i>=0; --i){
+        res*=system; res+=num[i];
+    }
+    return res;
 }

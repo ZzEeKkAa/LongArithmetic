@@ -68,3 +68,17 @@ BigInteger Algorithms::abs(BigInteger const &a){
     if(a.IsNegative()) return -a;
     return a;
 }
+
+BigInteger Algorithms::sqrt(BigInteger const &a){
+    BigInteger left("1",a.GetSystem()) ,right(a),middle;
+    BigInteger one("1",middle.GetSystem());
+
+    while(left<right){
+        middle=(left+right+one)/2;
+        if(middle*middle>a)
+            right=middle-one;
+        else
+            left=middle;
+    }
+    return left;
+}

@@ -15,6 +15,7 @@ class Algorithms
         static BigInteger abs(BigInteger const &a);
         static BigInteger Random(BigInteger const &minimal, BigInteger const &maximal);
         static void FastFourierTransform(std::vector<std::complex<long double> > & a, bool invert);
+        static BigInteger sqrt(BigInteger const &a);
 };
 
 #endif // ALGORITHMS_H

@@ -11,7 +11,7 @@ const BigInteger CookDivide::GetInversed(const BigInteger &b, int precision){
     BigInteger two("2",b.GetSystem()); two=two<<precision+1;
     BigInteger five("0",b.GetSystem()); five[0]=b.GetSystem()/2; five=five<<precision;
 
-    int iter = precision;
+    int iter = precision*2;
     for(int i=0; i<iter; ++i){
         ans=(ans*(two-ans*b)+five)>>precision+1;
     }

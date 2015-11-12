@@ -30,7 +30,7 @@ class BigInteger
         BigInteger(const BigInteger& num);
         BigInteger(std::string& num, int system=10);
         BigInteger(const char* num="0", int system=10);
-
+        BigInteger(long long num, int system=10);
         /** \brief Converts to new system
          *
          * \param system The new system in which operations will be done
@@ -53,6 +53,7 @@ class BigInteger
         friend const BigInteger operator-(const BigInteger& i);
         friend const BigInteger operator*(const BigInteger& left, const BigInteger& right);
         friend const BigInteger operator/(const BigInteger& left, const BigInteger& right);
+        friend const BigInteger operator/(const BigInteger& num, int n);
         friend const BigInteger operator%(const BigInteger& left, const BigInteger& right);
         friend const BigInteger operator+(const BigInteger& left, const BigInteger& right);
         friend const BigInteger operator-(const BigInteger& left, const BigInteger& right);
@@ -68,6 +69,7 @@ class BigInteger
         int GetAt(int pos) const;
         virtual ~BigInteger();
         void ClearFirstZeros();
+        long long ToLongLong();
     protected:
     private:
         std::vector<int> num;
