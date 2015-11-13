@@ -1,9 +1,10 @@
 #ifndef COOKDIVIDE_H
 #define COOKDIVIDE_H
 
+#include "Divide.h"
 #include "BigInteger.h"
 
-class CookDivide
+class CookDivide:public Divide
 {
     public:
         const BigInteger Div(const BigInteger &a, const BigInteger &b);

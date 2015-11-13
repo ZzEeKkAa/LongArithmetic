@@ -3,7 +3,10 @@
 const BigInteger CookDivide::Div(const BigInteger &a, const BigInteger &b){
     if(a==b) return BigInteger("1",a.GetSystem());
     int precision=b.GetSize(); if(precision<a.GetSize()) precision = a.GetSize(); precision+=10;
-    return a*GetInversed(b,precision)>>precision;
+    BigInteger ans = a*GetInversed(b,precision)>>precision;
+    //while(ans*b<a) ans=ans+BigInteger("1",ans.GetSystem());
+    //ans=ans-BigInteger("1",ans.GetSystem());
+    return ans;
 }
 
 const BigInteger CookDivide::GetInversed(const BigInteger &b, int precision){

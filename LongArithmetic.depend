@@ -80,13 +80,14 @@
 	"CookDivide.h"
 	"PollardFactorization.h"
 
-1447266548 source:c:\users\oleg\documents\github\longarithmetic\src\biginteger.cpp
+1447368090 source:c:\users\oleg\documents\github\longarithmetic\src\biginteger.cpp
 	"BigInteger.h"
 	"CookDivide.h"
+	"BinaryDivide.h"
 	<iostream>
 	<algorithm>
 
-1447266497 c:\users\oleg\documents\github\longarithmetic\include\biginteger.h
+1447357929 c:\users\oleg\documents\github\longarithmetic\include\biginteger.h
 	<vector>
 	<string>
 	<ostream>
@@ -113,10 +114,15 @@
 1447251198 c:\users\oleg\documents\github\longarithmetic\include\toomcookmultiplication.h
 	"Multiplies.h"
 
-1447173808 source:c:\users\oleg\documents\github\longarithmetic\src\algorithms.cpp
+1447366781 source:c:\users\oleg\documents\github\longarithmetic\src\algorithms.cpp
 	"Algorithms.h"
+	"BigInteger.h"
+	<cstdlib>
+	<ctime>
+	<iostream>
 
-1447173808 c:\users\oleg\documents\github\longarithmetic\include\algorithms.h
+1447357929 c:\users\oleg\documents\github\longarithmetic\include\algorithms.h
+	"BigInteger.h"
 	<vector>
 	<complex>
 
@@ -127,7 +133,7 @@
 1447173808 c:\users\oleg\documents\github\longarithmetic\include\schonhagemulriplies.h
 	"Multiplies.h"
 
-1447252194 source:c:\users\oleg\documents\github\longarithmetic\main.cpp
+1447369843 source:c:\users\oleg\documents\github\longarithmetic\main.cpp
 	<iostream>
 	<stdio.h>
 	"KaratsubaMultiplies.h"
@@ -135,11 +141,15 @@
 	"SchonhageMulriplies.h"
 	"BigInteger.h"
 	"CookDivide.h"
+	"BinaryDivide.h"
+	"PollardFactorization.h"
+	"DixonFactorization.h"
 
-1447194201 source:c:\users\oleg\documents\github\longarithmetic\src\cookdivide.cpp
+1447368029 source:c:\users\oleg\documents\github\longarithmetic\src\cookdivide.cpp
 	"CookDivide.h"
 
-1447193095 c:\users\oleg\documents\github\longarithmetic\include\cookdivide.h
+1447367670 c:\users\oleg\documents\github\longarithmetic\include\cookdivide.h
+	"Divide.h"
 	"BigInteger.h"
 
 1447247951 source:c:\users\oleg\documents\github\longarithmetic\src\karatsuba3multiplication.cpp
@@ -155,8 +165,9 @@
 	"BigInteger.h"
 	"Algorithms.h"
 
-1447266388 source:c:\users\oleg\documents\github\longarithmetic\src\pollardfactorization.cpp
+1447357929 source:c:\users\oleg\documents\github\longarithmetic\src\pollardfactorization.cpp
 	"PollardFactorization.h"
+	<iostream>
 
 1447265534 c:\users\oleg\documents\github\longarithmetic\include\pollardfactorization.h
 	"Factorization.h"
@@ -205,4 +216,25 @@
 1447274406 source:c:\users\zeka\documents\github\longarithmetic\src\schonhagemulriplies.cpp
 	"SchonhageMulriplies.h"
 	"Algorithms.h"
+
+1447369793 source:c:\users\oleg\documents\github\longarithmetic\src\dixonfactorization.cpp
+	"DixonFactorization.h"
+	<vector>
+	<cmath>
+	<iostream>
+
+1447364070 c:\users\oleg\documents\github\longarithmetic\include\dixonfactorization.h
+	"Factorization.h"
+
+1447368044 c:\users\oleg\documents\github\longarithmetic\include\divide.h
+	"BigInteger.h"
+
+1447368292 source:c:\users\oleg\documents\github\longarithmetic\src\binarydivide.cpp
+	"BinaryDivide.h"
+
+1447367734 c:\users\oleg\documents\github\longarithmetic\include\binarydivide.h
+	"Divide.h"
+
+1447367530 source:c:\users\oleg\documents\github\longarithmetic\src\divide.cpp
+	"Divide.h"
 

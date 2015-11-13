@@ -1,5 +1,6 @@
 #include "BigInteger.h"
 #include "CookDivide.h"
+#include "BinaryDivide.h"
 #include <iostream>
 #include <algorithm>
 
@@ -247,7 +248,7 @@ const BigInteger operator*(const BigInteger& left, const BigInteger& right){
 }
 
 const BigInteger operator/(const BigInteger& left, const BigInteger& right){
-    static CookDivide *div = new CookDivide();
+    static Divide *div = new BinaryDivide();
     return div->Div(left,right);
 }
 

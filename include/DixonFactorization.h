@@ -7,11 +7,7 @@
 class DixonFactorization : public Factorization
 {
     public:
-        DixonFactorization();
-        virtual ~DixonFactorization();
-        BigInteger GetFactor(BigInteger num);
-    protected:
-    private:
+        BigInteger GetFactor(const BigInteger & num);
 };
 
 #endif // DIXONFACTORIZATION_H

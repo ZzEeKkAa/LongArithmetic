@@ -7,7 +7,9 @@
 //#include "Multiplies.h"
 #include "BigInteger.h"
 #include "CookDivide.h"
+#include "BinaryDivide.h"
 #include "PollardFactorization.h"
+#include "DixonFactorization.h"
 
 using namespace std;
 
@@ -29,13 +31,17 @@ int main(){
     BigInteger bi2(s2,10);
     //BigInteger a("22435245647",10), b("33651",10);
     BigInteger a("22435245647",10), b("33659",10);
+    BigInteger c("15226279",10);
+    //BigInteger c("89755",10);
     //cout<<bi<<endl;
     //bi.ConvertTo(1000);
     //bi2.ConvertTo(1000);
 
     //cout<<bi<<endl;
 
-    CookDivide *divide = new CookDivide();
+    //Divide *divide = new CookDivide();
+    //Divide *divide = new BinaryDivide();
+
     //Multiplies *mult = new ToomCookMultiplies();
     //Multiplies *mult1 = new KaratsubaMultiplies();
     //Multiplies *mult = new Multiplies();
@@ -46,11 +52,12 @@ int main(){
 
     //cout<<divide->Div(a,b)<<endl;
 
-    BigInteger bi3 = bi*bi2;
+    //BigInteger bi3 = bi*bi2;
 
-    Factorization *fact = new PollardFactorization();
+    //Factorization *fact = new PollardFactorization();
+    Factorization *fact = new DixonFactorization();
 
-    cout<<fact->GetFactor(bi3)<<"|"<<bi3<<endl;
+    cout<<fact->GetFactor(c)<<"|"<<c<<endl;
 
 
 

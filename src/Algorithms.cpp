@@ -43,7 +43,9 @@ void Algorithms::FastFourierTransform(std::vector<std::complex<long double> > & 
 
 BigInteger Algorithms::Random(BigInteger const &minimal, BigInteger const &maximal){
     BigInteger d(maximal-minimal);
-    srand(time(NULL));
+    static bool first =true;
+    if(first) srand(time(NULL)),first=false;
+
     BigInteger ans("0",d.GetSystem());
     for(int i=0; i<d.GetSize(); ++i){
         ans[i]=rand()%ans.GetSystem();

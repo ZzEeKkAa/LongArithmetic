@@ -35,7 +35,10 @@
 		</Compiler>
 		<Unit filename="include/Algorithms.h" />
 		<Unit filename="include/BigInteger.h" />
+		<Unit filename="include/BinaryDivide.h" />
 		<Unit filename="include/CookDivide.h" />
+		<Unit filename="include/Divide.h" />
+		<Unit filename="include/DixonFactorization.h" />
 		<Unit filename="include/Factorization.h" />
 		<Unit filename="include/Karatsuba3Multiplication.h" />
 		<Unit filename="include/KaratsubaMultiplies.h" />
@@ -46,7 +49,10 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Algorithms.cpp" />
 		<Unit filename="src/BigInteger.cpp" />
+		<Unit filename="src/BinaryDivide.cpp" />
 		<Unit filename="src/CookDivide.cpp" />
+		<Unit filename="src/Divide.cpp" />
+		<Unit filename="src/DixonFactorization.cpp" />
 		<Unit filename="src/Factorization.cpp" />
 		<Unit filename="src/Karatsuba3Multiplication.cpp" />
 		<Unit filename="src/KaratsubaMultiplies.cpp" />
